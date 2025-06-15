@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown在线解释器</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./katex.min.css">
+  <script src="./markdown-it.min.js"></script>
+  <script src="./katex.min.js"></script>
+  <script src="./mermaid.min.js"></script>
+  <link rel="icon" href="./icon.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <div class="editor">
+      <textarea id="input" placeholder="输入Markdown..."># Hello Markdown</textarea>
+    </div>
+    <div class="preview" id="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
