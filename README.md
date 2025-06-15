@@ -16,6 +16,7 @@
   - 行内公式：`$E=mc^2$`
   - 块级公式：`$$\int_{a}^{b} x^2 dx$$`
 - 支持Mermaid流程图和图表：
+- 支持Chart.js图表：使用代码块标记为`chart`定义各类图表
   - 使用代码块标记为`mermaid`：
     ```mermaid
     graph TD
@@ -26,6 +27,29 @@
     ```
 
 ## 使用方法
+
+### 图表支持
+
+使用 ECharts 支持丰富的交互式图表渲染。示例：
+
+```echarts
+{
+  "xAxis": {
+    "type": "category",
+    "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+  },
+  "yAxis": {
+    "type": "value"
+  },
+  "series": [{
+    "data": [820, 932, 901, 934, 1290, 1330, 1320],
+    "type": "line"
+  }]
+}
+```
+
+更多 ECharts 配置选项请参考 [ECharts 官方文档](https://echarts.apache.org/zh/option.html)。
+
 
 1. 打开`index.html`文件
 2. 在左侧文本区域输入Markdown内容

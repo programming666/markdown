@@ -49,15 +49,26 @@ document.addEventListener('DOMContentLoaded', function() {
     output.innerHTML = tempDiv.innerHTML;
     
     // 渲染Mermaid图表
-    if (window.mermaid) {
-      window.mermaid.initialize({ 
-        startOnLoad: true,
-        securityLevel: 'loose'
+    document.querySelectorAll('.mermaid').forEach(el => {
+      mermaid.render(`mermaid-${Math.random().toString(36).substr(2, 9)}`, el.textContent, (svgCode) => {
+        el.innerHTML = svgCode;
       });
-      window.mermaid.run({
-        querySelector: '.mermaid',
-      });
-    }
+    });
+
+    // 渲染ECharts图表
+    document.querySelectorAll('pre code.language-echarts').forEach(block => {
+      const chartId = `echart-${Math.random().toString(36).substr(2, 9)}`;
+      const chartContainer = document.createElement('div');
+      chartContainer.id = chartId;
+      chartContainer.style.width = '100%';
+      chartContainer.style.height = '400px';
+      block.parentNode.parentNode.replaceChild(chartContainer, block.parentNode);
+      
+      const chartOption = eval(`(${block.textContent})`);
+      const myChart = echarts.init(document.getElementById(chartId));
+      myChart.setOption(chartOption);
+      window.addEventListener('resize', () => myChart.resize());
+    })
   }
   
   input.addEventListener('input', renderMarkdown);
