@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const input = document.getElementById('input');
   const output = document.getElementById('output');
   
-  // 初始化markdown-it
-  const md = window.markdownit();
+  // 初始化markdown-it并启用插件
+  const md = window.markdownit()
+    .use(window.markdownitEmoji)
   
   function renderMarkdown() {
     const markdownText = input.value;
