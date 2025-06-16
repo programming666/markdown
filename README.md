@@ -1,6 +1,6 @@
 # Markdown在线解释器
 
-这是一个支持实时预览的Markdown解释器，可将Markdown文本转换为HTML格式，并支持LaTeX数学公式和Mermaid流程图渲染。
+这是一个支持实时预览的$\boxed{\text{拼好码}}$Markdown解释器，可将Markdown文本转换为HTML格式，并支持LaTeX数学公式和Mermaid流程图渲染等。
 
 ## 功能特性
 
@@ -26,11 +26,8 @@
       C -->|否| B
     ```
 
-## 使用方法
-
-### 图表支持
-
-使用 ECharts 支持丰富的交互式图表渲染。示例：
+- 支持使用 ECharts 支持丰富的交互式图表渲染。示例：
+  - 使用代码块标记为`echarts`
 
 ```echarts
 {
@@ -50,6 +47,7 @@
 
 更多 ECharts 配置选项请参考 [ECharts 官方文档](https://echarts.apache.org/zh/option.html)。
 
+## 使用方法
 
 1. 打开`index.html`文件
 2. 在左侧文本区域输入Markdown内容
@@ -73,3 +71,4 @@ $$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
 - `katex.min.js` - LaTeX渲染引擎
 - `katex.min.css` - LaTeX样式表
 - `mermaid.min.js` - Mermaid图表库
+- `echarts.min.js` - ECharts表格库
