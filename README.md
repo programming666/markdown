@@ -1,6 +1,6 @@
 # Markdown在线解释器
 
-这是一个支持实时预览的$\boxed{\text{拼好码}}$Markdown解释器，可将Markdown文本转换为HTML格式，并支持LaTeX数学公式和Mermaid流程图渲染等。
+这是一个支持实时预览的～～自制～～拼好码Markdown解释器（～～用的全是现成的～～），可将Markdown文本转换为HTML格式，并支持LaTeX数学公式和Mermaid流程图渲染等。
 
 ## 功能特性
 
