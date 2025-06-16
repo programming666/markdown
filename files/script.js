@@ -49,11 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
     output.innerHTML = tempDiv.innerHTML;
     
     // 渲染Mermaid图表
-    document.querySelectorAll('.mermaid').forEach(el => {
-      mermaid.render(`mermaid-${Math.random().toString(36).substr(2, 9)}`, el.textContent, (svgCode) => {
-        el.innerHTML = svgCode;
+    // 渲染Mermaid图表
+    if (window.mermaid) {
+      window.mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose'
       });
-    });
+      window.mermaid.run({
+        querySelector: '.mermaid',
+      });
+    }
 
     // 渲染ECharts图表
     document.querySelectorAll('pre code.language-echarts').forEach(block => {
