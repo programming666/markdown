@@ -46,8 +46,8 @@
 
 更多 ECharts 配置选项请参考 [ECharts 官方文档](https://echarts.apache.org/zh/option.html)。
 
--支持emoji
-  -输入例如`:smile:`等
+- 支持emoji
+  - 输入例如`:smile:`等
 ## 使用方法
 
 1. 打开`index.html`文件
@@ -73,3 +73,4 @@ $$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
 - `katex.min.css` - LaTeX样式表
 - `mermaid.min.js` - Mermaid图表库
 - `echarts.min.js` - ECharts表格库
+- `markdown-it-emoji.min.js` Emoji图标库
