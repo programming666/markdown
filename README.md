@@ -16,7 +16,6 @@
   - 行内公式：`$E=mc^2$`
   - 块级公式：`$$\int_{a}^{b} x^2 dx$$`
 - 支持Mermaid流程图和图表：
-- 支持Chart.js图表：使用代码块标记为`chart`定义各类图表
   - 使用代码块标记为`mermaid`：
     ```mermaid
     graph TD
@@ -47,6 +46,8 @@
 
 更多 ECharts 配置选项请参考 [ECharts 官方文档](https://echarts.apache.org/zh/option.html)。
 
+-支持emoji
+  -输入例如`:smile:`等
 ## 使用方法
 
 1. 打开`index.html`文件
