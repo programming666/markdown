@@ -9,14 +9,25 @@
   <script src="./markdown-it.min.js"></script>
   <script src="./katex.min.js"></script>
   <script src="./mermaid.min.js"></script>
+<<<<<<< Updated upstream:index.html
+=======
+  <script src="./echarts.min.js"></script>
+>>>>>>> Stashed changes:files/index.html
   <link rel="icon" href="./icon.png" type="image/png">
 </head>
 <body>
   <div class="container">
-    <div class="editor">
-      <textarea id="input" placeholder="输入Markdown..."># Hello Markdown</textarea>
+    <div class="file-upload">
+      <input type="file" id="md-upload" accept=".md" style="display: none;">
+      <button id="upload-btn">上传Markdown文件</button>
+      <span id="file-name"></span>
     </div>
-    <div class="preview" id="output"></div>
+    <div class="editor-container">
+      <div class="editor">
+        <textarea id="input" placeholder="输入Markdown..."># Hello Markdown</textarea>
+      </div>
+      <div class="preview" id="output"></div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

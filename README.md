@@ -28,7 +28,7 @@
 ## 使用方法
 
 1. 打开`index.html`文件
-2. 在左侧文本区域输入Markdown内容
+2. 在左侧文本区域输入Markdown内容或上传markdown源文件。
 3. 右侧区域将实时显示渲染结果
 4. 包含LaTeX公式的示例：
 ```markdown

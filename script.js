@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
   const input = document.getElementById('input');
   const output = document.getElementById('output');
+  const uploadBtn = document.getElementById('upload-btn');
+  const mdUpload = document.getElementById('md-upload');
+  const fileName = document.getElementById('file-name');
+
+  // 设置文件上传按钮点击事件
+  uploadBtn.addEventListener('click', () => {
+    mdUpload.click(); // 触发隐藏的文件输入框
+  });
+
+  // 文件选择变化事件
+  mdUpload.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file && file.name.endsWith('.md')) {
+      fileName.textContent = file.name;
+      
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        input.value = event.target.result;
+        renderMarkdown(); // 渲染上传的Markdown内容
+      };
+      reader.readAsText(file);
+    } else {
+      fileName.textContent = '请选择markdown源文件';
+    }
+  });
   
   // 初始化markdown-it
   const md = window.markdownit();
