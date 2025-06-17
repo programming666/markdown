@@ -15,10 +15,17 @@
 </head>
 <body>
   <div class="container">
-    <div class="editor">
-      <textarea id="input" placeholder="输入Markdown..."># Hello Markdown</textarea>
+    <div class="file-upload">
+      <input type="file" id="md-upload" accept=".md" style="display: none;">
+      <button id="upload-btn">上传Markdown文件</button>
+      <span id="file-name"></span>
     </div>
-    <div class="preview" id="output"></div>
+    <div class="editor-container">
+      <div class="editor">
+        <textarea id="input" placeholder="输入Markdown..."># Hello Markdown</textarea>
+      </div>
+      <div class="preview" id="output"></div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
