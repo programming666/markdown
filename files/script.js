@@ -28,9 +28,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // 初始化markdown-it并启用插件
-  const md = window.markdownit()
+  const md = window.markdownit({
+    highlight: function(str, lang) {
+      if (lang && window.hljs.getLanguage(lang)) {
+        try {
+          return window.hljs.highlight(str, { language: lang }).value;
+        } catch (__) {}
+      }
+      return ''; // 使用额外的默认转义
+    }
+  })
     .use(window.markdownitEmoji)
-  
+
   function renderMarkdown() {
     const markdownText = input.value;
     const html = md.render(markdownText);
@@ -75,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     output.innerHTML = tempDiv.innerHTML;
     
     // 渲染Mermaid图表
-    // 渲染Mermaid图表
     if (window.mermaid) {
       window.mermaid.initialize({
         startOnLoad: true,
@@ -100,6 +108,14 @@ document.addEventListener('DOMContentLoaded', function() {
       myChart.setOption(chartOption);
       window.addEventListener('resize', () => myChart.resize());
     })
+    
+    // 应用代码高亮和行号
+    if (window.hljs) {
+      document.querySelectorAll('pre code').forEach(block => {
+        window.hljs.highlightElement(block);
+        window.hljs.lineNumbersBlock(block);
+      });
+    }
   }
   
   input.addEventListener('input', renderMarkdown);

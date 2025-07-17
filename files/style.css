@@ -5,6 +5,30 @@ body {
   background-color: #f5f7fa;
 }
 
+/* 代码高亮样式调整 */
+pre code.hljs {
+  background: #000 !important;
+  color: #fff !important;
+  padding-left: 40px !important;
+}
+
+.line-numbers .line-numbers-rows {
+  right: auto !important;
+  left: 0 !important;
+  border-right: 5px solid #555 !important;
+  padding-right: 20px !important;
+}
+
+/* 增强代码高亮颜色鲜艳度 */
+.hljs-keyword { color: #ff79c6 !important; }
+.hljs-type { color: #8be9fd !important; }
+.hljs-built_in { color: #8be9fd !important; }
+.hljs-string { color: #f1fa8c !important; }
+.hljs-comment { color: #6272a4 !important; }
+.hljs-title.function_ { color: #50fa7b !important; }
+.hljs-number { color: #bd93f9 !important; }
+
+
 .container {
   display: flex;
   flex-direction: column;
