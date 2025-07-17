@@ -50,10 +50,13 @@
   - 输入例如`:smile:`等
 ## 使用方法
 
-1. 打开`index.html`文件
-2. 在左侧文本区域输入Markdown内容
-3. 右侧区域将实时显示渲染结果
-4. 包含LaTeX公式的示例：
+1. 安装node.js[nodejs官网](https://nodejs.org/zh-cn)
+2. 使用git clone此仓库到本地
+3. 打开项目根目录并运行`npm install`命令
+4. 运行`npm run start`或`npm run dev`
+5. 在左侧文本区域输入Markdown内容
+6. 右侧区域将实时显示渲染结果
+7. 包含LaTeX公式的示例：
 ```markdown
 # 质能方程
 
@@ -62,15 +65,3 @@
 块级公式：
 $$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
 ```
-
-## 项目文件
-
-- `index.html` - 主页面
-- `script.js` - Markdown解析和渲染逻辑
-- `style.css` - 页面样式
-- `markdown-it.min.js` - Markdown解析库
-- `katex.min.js` - LaTeX渲染引擎
-- `katex.min.css` - LaTeX样式表
-- `mermaid.min.js` - Mermaid图表库
-- `echarts.min.js` - ECharts表格库
-- `markdown-it-emoji.min.js` Emoji图标库
